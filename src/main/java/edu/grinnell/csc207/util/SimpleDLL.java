@@ -12,7 +12,9 @@ import java.util.NoSuchElementException;
  *
  * @author Samuel A. Rebelsky
  * @author Your Name Here
- * @author Your Name Here
+ * @author N/A Note: Jafar and I did not get to work on 
+ * any implementations together though we submitted the 
+ * lab write up together to the best of our ability
  *
  * @param <T>
  *   The type of elements stored in the list.
