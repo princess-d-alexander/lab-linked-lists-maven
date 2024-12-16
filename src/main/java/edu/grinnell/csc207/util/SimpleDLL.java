@@ -1,6 +1,5 @@
 package edu.grinnell.csc207.util;
 
-import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
@@ -11,7 +10,7 @@ import java.util.NoSuchElementException;
  * These do *not* (yet) support the Fail Fast policy.
  *
  * @author Samuel A. Rebelsky
- * @author Your Name Here
+ * @author Princess Alexander
  * @author N/A Note: Jafar and I did not get to work on 
  * any implementations together though we submitted the 
  * lab write up together to the best of our ability
@@ -152,9 +151,16 @@ public class SimpleDLL<T> implements SimpleList<T> {
 
       public T previous() throws NoSuchElementException {
         if (!this.hasPrevious()) {
-          throw new NoSuchElementException(); // STUB
+            throw new NoSuchElementException();
         } // if
-        return null;
+    
+        // Move the cursor backwards
+        this.next = this.prev;
+        this.prev = this.prev.prev;
+        this.update = this.prev;
+    
+        // Return the value of the previous node
+        return this.update.value;
       } // previous()
 
       public void remove() {

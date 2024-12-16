@@ -4,7 +4,7 @@ Code for a lab on implementing a simple list interface with doubly linked lists.
 
 Authors
 
-* Princess Alexander
+* Princess Alexander (completed later implementations)
 * Jafar Jarrar
 * Samuel A. Rebelsky (starter code).
 
